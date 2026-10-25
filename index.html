@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE MALL | Premium Shopping</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">LUXE<span>MALL</span></a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Shop</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="login-btn" id="openLogin">Sign In</button>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">THE FUTURE OF SHOPPING</p>
+                <h1>Discover More.<br><span>Live Better.</span></h1>
+                <p>
+                    Explore exceptional fashion, electronics, accessories
+                    and more — all in one premium shopping destination.
+                </p>
+                <a href="#products" class="shop-btn">Explore Collection →</a>
+            </div>
+
+            <div class="hero-art">
+                <div class="hero-circle">
+                    <span>L</span>
+                    <p>YOUR WORLD.<br>YOUR STYLE.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="welcome-section">
+            <p class="eyebrow">WELCOME TO LUXE MALL</p>
+            <h2 id="welcomeMessage">Your next favorite thing awaits.</h2>
+            <p id="welcomeSubtext">
+                Quality products. Exceptional experiences.
+            </p>
+        </section>
+
+        <section class="products-section" id="products">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">CURATED FOR YOU</p>
+                    <h2>Featured Collections</h2>
+                </div>
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search products..."
+                    aria-label="Search products"
+                >
+            </div>
+
+            <div class="category-list">
+                <button class="category active" data-category="All">All</button>
+                <button class="category" data-category="Fashion">Fashion</button>
+                <button class="category" data-category="Electronics">Electronics</button>
+                <button class="category" data-category="Accessories">Accessories</button>
+            </div>
+
+            <div class="product-grid" id="productGrid"></div>
+        </section>
+
+        <section class="about-section" id="about">
+            <p class="eyebrow">MORE THAN SHOPPING</p>
+            <h2>A better way to discover what you love.</h2>
+            <p>
+                LUXE MALL brings style, technology and everyday essentials
+                together in one seamless shopping experience.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#" class="logo">LUXE<span>MALL</span></a>
+        <p>Discover your world. © <span id="year"></span> LUXE MALL.</p>
+    </footer>
+
+    <!-- Login modal -->
+    <div class="modal" id="loginModal" aria-hidden="true">
+        <div class="modal-card">
+            <button class="close-btn" id="closeLogin"
+                aria-label="Close login">&times;</button>
+
+            <p class="eyebrow">YOUR PREMIUM EXPERIENCE</p>
+            <h2>Welcome back.</h2>
+            <p class="modal-description">
+                Sign in to personalize your shopping experience.
+            </p>
+
+            <form id="loginForm">
+                <label for="customerName">Your name</label>
+                <input id="customerName" type="text"
+                    placeholder="Enter your name" required maxlength="60">
+
+                <label for="customerEmail">Email address</label>
+                <input id="customerEmail" type="email"
+                    placeholder="you@example.com" required>
+
+                <label for="customerPassword">Password</label>
+                <input id="customerPassword" type="password"
+                    placeholder="Enter a password" required minlength="6">
+
+                <button type="submit" class="shop-btn full-btn">
+                    Enter LUXE MALL →
+                </button>
+                <p class="form-note">
+                    Demo login only. Connect a secure backend for real accounts.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
